@@ -1,0 +1,44 @@
+# 📦 Import libraries
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+
+# 📋 Step 1: Create sample data
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Age': [25, 30, 35, 40],
+    'Salary': [50000, 60000, 70000, 80000]
+}
+df = pd.DataFrame(data)
+print(">>> Original Data:")
+print(df)
+
+# 🔍 Step 2: Preprocessing – check for missing values
+print("\n>>> Missing values per column:")
+print(df.isnull().sum())
+
+# 🔄 Step 3: Transformation – standardize Age and Salary
+scaler = StandardScaler()
+df[['Age', 'Salary']] = scaler.fit_transform(df[['Age', 'Salary']])
+print("\n>>> Transformed Data:")
+print(df)
+
+# 💾 Step 4: Load – save to CSV
+output_path = "final_output.csv"
+df.to_csv(output_path, index=False)
+print(f"\n✅ Transformed data saved to '{output_path}'")
+
+# 📊 Step 5: Visualization – compare before & after scaling Salary
+fig, axs = plt.subplots(1, 2, figsize=(12, 5))
+
+# Before scaling
+axs[0].bar(data['Name'], data['Salary'], color='skyblue')
+axs[0].set_title("Original Salary")
+axs[0].set_ylabel("Salary")
+
+# After scaling
+axs[1].bar(df['Name'], df['Salary'], color='orange')
+axs[1].set_title("Standardized Salary")
+
+plt.tight_layout()
+plt.show()
