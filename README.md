@@ -10,9 +10,9 @@
 
 **DURATION**: NEELA SANTHOSH
 
-##The goal of this task is to create a data pipeline that performs ETL — Extract, Transform, and Load — using Python tools like pandas and scikit-learn. This pipeline will clean and prepare data for further analysis or machine learning applications. Technologies Used:Python,Pandas – for data extraction and manipulation,Scikit-learn – for transformation using pipelines and preprocessors.A cleaned, preprocessed dataset ready for machine learning or analytics tasks. 
+## The goal of this task is to create a data pipeline that performs ETL — Extract, Transform, and Load — using Python tools like pandas and scikit-learn. This pipeline will clean and prepare data for further analysis or machine learning applications. Technologies Used:Python,Pandas – for data extraction and manipulation,Scikit-learn – for transformation using pipelines and preprocessors.A cleaned, preprocessed dataset ready for machine learning or analytics tasks. 
 
-#OUTPUT
+# OUTPUT
 
 Original Data:
 
